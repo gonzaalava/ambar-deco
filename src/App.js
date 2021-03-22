@@ -11,14 +11,16 @@ function App() {
   
   useEffect(() => {
     new Promise ((todoBien, todoMal) => {
-      todo bien (["Marco Perla","Marco Gris","Marco Liso","Marco Espejo"])
-    })
-  })
+      setTimeout(() => {
+        todoBien (["Marco Perla","Marco Gris","Marco Liso","Marco Espejo"]);
+      }, 2000); 
+    }).then(resultado => setItems(resultado));
+  });
   
   return (
-    <div>
+    <div className="App">
     <NavBar />
-    <ItemLIstContainer items={} />
+    <ItemLIstContainer items={items} />
     <ItemCount stock={9} initial={1} />
     </div>
   );

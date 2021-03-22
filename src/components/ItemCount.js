@@ -5,7 +5,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
             <br />
             <input id="cantidad" type="number" placeholder={initial} />
             <br />
-            <button onClick={() => onAdd(9)}> Agregar al carrito</button>
+            <button onClick={(e) => onAdd(e, 1)}> Agregar al carrito</button>
         </form>
     );
 };
