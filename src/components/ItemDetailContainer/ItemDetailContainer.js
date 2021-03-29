@@ -1,13 +1,15 @@
 import React from "react";
-import {useEffect} from React;
+import { useEffect, useState} from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
 
-const ItemDetailContainer = ({items}) => {
+const ItemDetailContainer = (props) => {
+
+  const [items, setItems] = useState ([]);
 
   useEffect(() => {
     new Promise((success, failure) => {
       setTimeout(() => {
-        success({ id, title, description, price, pictureUrl});
+        success({id:1});
       }, 2000);
     }).then((resultado) => setItems(resultado));
   }, []);

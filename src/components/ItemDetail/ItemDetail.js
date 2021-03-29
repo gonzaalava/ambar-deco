@@ -1,4 +1,4 @@
-const Item = ({item}) => {
+const ItemDetail = ({item}) => {
 
 	return (
         <ul>

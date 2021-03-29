@@ -5,9 +5,9 @@ import ItemCount from './components/ItemCount/ItemCount';
 import {React, useEffect, useState } from 'react';
 
 //Fotos productos
-import cuadromujer from "./assets/cuadros/cuadromujer";
-import figuramujer from "./assets/cuadros/figuramujer";
-import geometria from "./assets/cuadros/geometria";
+import cuadromujer from "./assets/cuadros/cuadromujer.svg";
+import figuramujer from "./assets/cuadros/figuramujer.svg";
+import geometria from "./assets/cuadros/geometria.svg";
 
 
 function App() {
