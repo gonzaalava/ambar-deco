@@ -37,22 +37,24 @@ function App() {
   
   ];
 
-  v
+  const [items, setItems] = useState([]);
   
   useEffect(() => {
     new Promise((success, failure) => {
       setTimeout(() => {
-        success([itemsMockData]);
+        success(itemsMockData);
       }, 2000);
     }).then((resultado) => setItems(resultado));
-  });
+  },
+  []
+  );
+
+
 
   return (
     <>
     <NavBar />
-    <ItemLIstContainer 
-      title="Catalogo"
-      items={items} />
+    <ItemLIstContainer items={props.items} />
     <ItemCount stock={5} initial={1} />
     </>
   );

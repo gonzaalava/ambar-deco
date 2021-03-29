@@ -2,7 +2,7 @@ import ItemList from "../ItemList/ItemList";
 import ItemCount from "../ItemCount/ItemCount";
 import { Fragment, useState } from "react";
 
-const ItemListContainer = ({items}) => { 
+const ItemListContainer = (props) => { 
 
   //Decla Stock
   const cantStock = 5;
@@ -17,7 +17,7 @@ const ItemListContainer = ({items}) => {
   return (
       <Fragment>
         <div>
-          <ItemList items={items} />
+          <ItemList items={props.items} />
         </div>
         <br />
         <ItemCount

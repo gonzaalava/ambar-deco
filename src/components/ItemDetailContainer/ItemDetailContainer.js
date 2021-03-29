@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState} from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
 
-const ItemDetailContainer = (props) => {
+const ItemDetailContainer = ({items}) => {
 
   const [items, setItems] = useState ([]);
 

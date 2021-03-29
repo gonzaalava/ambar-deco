@@ -1,12 +1,13 @@
-const ItemDetail = ({item}) => {
+
+const ItemDetail = (props) => {
 
 	return (
         <ul>
-            <li>Id:{item.id}</li>
-            <li>Titulos:{item.title}</li>
-            <li>Descripción:{item.description}</li>
-            <li>Precio{item.price}</li>
-            <li><img src={item.pictureUrl} alt="prducto" height="100" width="auto" /></li>
+            <li>{props.item.id}</li>
+            <li>{props.item.title}</li>
+            <li>{props.item.description}</li>
+            <li>{props.item.price}</li>
+            <li><img src={props.item.pictureUrl} alt="prducto" height="100" width="auto" /></li>
         </ul>
     )
 

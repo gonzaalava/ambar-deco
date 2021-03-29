@@ -1,5 +1,5 @@
 import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer";
 
-const Item = ({item}) => <ItemDetailContainer />
+const Item = (props) => <ItemDetailContainer />
 
 export default Item;
