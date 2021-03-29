@@ -37,7 +37,7 @@ function App() {
   
   ];
 
-  const [items, setItems] = useState ([]);
+  v
   
   useEffect(() => {
     new Promise((success, failure) => {
