@@ -3,6 +3,7 @@ import ItemLIstContainer from './components/ItemListContainer/ItemListContainer'
 import NavBar from './components/Navbar/NavBar';
 import ItemCount from './components/ItemCount/ItemCount';
 import {React, useEffect, useState } from 'react';
+import Products from "./components/Data/products";
 import {
   BrowserRouter as Router,
   Switch,
@@ -23,51 +24,29 @@ import geometria from "./assets/cuadros/geometria.svg";
 
 function App() {
 
-  const itemsMockData = [
-    {
-        id: 1,
-        title: "Cara Mujer Pincel",
-        description: "Cuadro Ilustrado",
-        price: 27000,
-        pictureUrl: {cuadromujer},
-    },
-    {
-        id: 2,
-        title: "Power Geometry",
-        description: "Cuadro Ilustrado",
-        price: 25000,
-        pictureUrl: {geometria},
-    },
-    {
-        id: 3,
-        title: "Silueta Mujer Trazo Grueso",
-        description: "Cuadro Ilustrado",
-        price: 27000,
-        pictureUrl: {figuramujer},
-    }
-  
-  ];
-
   const [items, setItems] = useState([]);
   
   useEffect(() => {
     new Promise((success, failure) => {
       setTimeout(() => {
-        success(itemsMockData);
+        success(Products);
       }, 2000);
     }).then((resultado) => setItems(resultado));
   },
   []
   );
 
-
-
   return (
-    <Router>
+    <BrowserRouter>
       <NavBar />
-      <ItemLIstContainer items={props.items} />
+        <Switch>
+          <Route exact path="/"> 
+          <ItemLIstContainer items={props.items} />
+          </Route>
+        
       <ItemCount stock={5} initial={1} />
-    </Router>
+      </Switch>
+    </BrowserRouter>
   );
 };
 
